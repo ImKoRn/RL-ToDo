@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Awesome ToDo</string>
+    <string name="button">Press me!</string>
+    <string name="edit_text_hint">Type here</string>
+</resources>
