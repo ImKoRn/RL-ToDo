@@ -2,4 +2,7 @@
     <string name="app_name">My Awesome ToDo</string>
     <string name="button">Press me!</string>
     <string name="edit_text_hint">Type here</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
 </resources>
