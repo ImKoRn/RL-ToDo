@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.richelieu.myawesometodo.R
+import com.richelieu.myawesometodo.manager.ToDoFragmentManager
 
 class LoginSelectionFragment : Fragment() {
 
@@ -22,14 +23,8 @@ class LoginSelectionFragment : Fragment() {
 
         val loginButton: Button = view.findViewById(R.id.loginButton)
 
-        loginButton.setOnClickListener { showLoginFragment() }
-    }
-
-    fun showLoginFragment() {
-        fragmentManager
-                ?.beginTransaction()
-                ?.replace(R.id.container, LoginFragment())
-                ?.addToBackStack(null)
-                ?.commit()
+        loginButton.setOnClickListener {
+            ToDoFragmentManager.showLoginFragment()
+        }
     }
 }

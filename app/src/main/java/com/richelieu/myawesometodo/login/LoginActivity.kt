@@ -2,33 +2,21 @@ package com.richelieu.myawesometodo.login
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import com.richelieu.myawesometodo.R
+import com.richelieu.myawesometodo.manager.ToDoFragmentManager
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        showFragment(LoginSelectionFragment())
+        ToDoFragmentManager.init(supportFragmentManager)
+        ToDoFragmentManager.showLoginSelectionFragment()
     }
 
     override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount != 0) {
-            supportFragmentManager.popBackStack()
-            val fragment = supportFragmentManager.fragments.last()
-            showFragment(fragment)
-        } else {
+        if (!ToDoFragmentManager.showPreviousFragment()) {
             super.onBackPressed()
         }
-    }
-
-    fun showFragment(fragment: Fragment) {
-        supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.container, fragment)
-                .addToBackStack(null)
-                .commit()
     }
 }
