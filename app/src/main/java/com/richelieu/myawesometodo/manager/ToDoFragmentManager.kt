@@ -1,7 +1,7 @@
 package com.richelieu.myawesometodo.manager
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.richelieu.myawesometodo.R
 import com.richelieu.myawesometodo.login.LoginFragment
 import com.richelieu.myawesometodo.login.LoginSelectionFragment
